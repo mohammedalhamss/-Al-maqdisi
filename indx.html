@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم المقدسي | نكهة فلسطينية أصيلة</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            olive: '#2E4F39',
+                            oliveLight: '#3D5A46',
+                            sand: '#F4EBD9',
+                            sandLight: '#F9F6F0',
+                            dark: '#2B1E17',
+                            gold: '#C5A880'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background-color: #F9F6F0;
+            color: #2B1E17;
+        }
+        
+        .pattern-bg {
+            background-color: #F9F6F0;
+            background-image: radial-gradient(#2e4f39 0.5px, transparent 0.5px), radial-gradient(#2e4f39 0.5px, #F9F6F0 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.02;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://linktr.ee/almaqdisi" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all transform hover:scale-110 flex items-center justify-center" aria-label="Order on WhatsApp">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.528 1.975 14.062  shrink 1.045 12.005 1.045c-5.444 0-9.866 4.372-9.87 9.802-.001 1.772.477 3.504 1.384 5.027l-.953 3.483 3.57-.923zm10.237-5.014c-.26-.13-1.538-.759-1.776-.846-.238-.087-.412-.13-.586.13-.173.26-.671.846-.823 1.019-.152.173-.304.195-.564.065-.26-.13-1.097-.404-2.09-1.289-.773-.689-1.295-1.542-1.447-1.802-.152-.26-.016-.4.114-.53.116-.117.26-.304.39-.455.13-.152.173-.26.26-.433.087-.173.043-.325-.022-.455-.065-.13-.586-1.411-.802-1.93-.211-.51-.443-.44-.586-.44-.136-.006-.293-.006-.451-.006-.159 0-.417.06-.635.305-.218.243-.829.813-.829 1.981 0 1.168.847 2.298.965 2.46.117.173 1.666 2.544 4.037 3.57.564.244 1.004.39 1.348.5.568.181 1.084.155 1.493.094.455-.068 1.539-.628 1.756-1.235.217-.606.217-1.127.152-1.235-.065-.108-.238-.173-.498-.303z"/></svg>
+    </a>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-brand-sandLight/95 backdrop-blur-md border-b border-brand-olive/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <!-- Placeholder Logo Representing AL-MAQDISI Logo -->
+                    <div class="text-brand-olive font-black text-2xl tracking-wide font-cairo flex items-center gap-2">
+                        <span class="text-3xl">🌿</span>
+                        <div class="flex flex-col border-r-2 border-brand-olive pr-2">
+                            <span>المقدسي</span>
+                            <span class="text-xs tracking-widest font-light text-brand-gold">AL-MAQDISI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-reverse space-x-8 font-medium text-lg">
+                    <a href="#best-sellers" class="text-brand-dark hover:text-brand-olive transition-colors">الأكثر مبيعًا</a>
+                    <a href="#menu" class="text-brand-dark hover:text-brand-olive transition-colors">المنيو</a>
+                    <a href="#boxes" class="text-brand-dark hover:text-brand-olive transition-colors">البوكسات</a>
+                    <a href="#contact" class="text-brand-dark hover:text-brand-olive transition-colors">تواصل معنا</a>
+                </div>
+                <div>
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="bg-brand-olive text-brand-sandLight px-6 py-2.5 rounded-full font-semibold hover:bg-brand-oliveLight transition-all transform hover:scale-105 shadow-md">اطلب الآن</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-brand-dark h-[90vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Food Overlay -->
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('فلافل المقدسي.jpeg'); filter: blur(2px) brightness(0.5);"></div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/50 z-10"></div>
+
+        <div class="relative z-20 text-center max-w-4xl px-4 mx-auto text-brand-sandLight">
+            <!-- Decorative Motif -->
+            <div class="text-brand-gold text-4xl mb-4 animate-fade-in">🌿 ⚜️ 🌿</div>
+            <h1 class="text-4xl sm:text-6xl font-black font-cairo mb-6 leading-tight drop-shadow-md">
+                نكهة فلسطينية أصيلة في كل لقمة
+            </h1>
+            <p class="text-lg sm:text-2xl font-light text-brand-sand/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+                استمتع بأشهى الأطباق الفلسطينية المحضرة بحب وجودة عالية كـ الفول الغزاوي، الفلافل الهشة، والبوكسات العائلية الفاخرة.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://linktr.ee/almaqdisi" target="_blank" class="w-full sm:w-auto bg-brand-olive text-brand-sandLight px-10 py-4 rounded-full text-xl font-bold shadow-xl hover:bg-brand-oliveLight transition-all transform hover:-translate-y-1 text-center">اطلب الآن</a>
+                <a href="#menu" class="w-full sm:w-auto bg-transparent border-2 border-brand-sand text-brand-sand px-10 py-4 rounded-full text-xl font-bold backdrop-blur-sm hover:bg-brand-sand hover:text-brand-dark transition-all transform hover:-translate-y-1 text-center">تصفح المنيو</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: الأكثر مبيعًا -->
+    <section id="best-sellers" class="py-24 pattern-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-gold font-bold tracking-widest text-sm uppercase block mb-2">مختاراتنا المميزة</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-cairo text-brand-dark inline-block relative after:content-[''] after:block after:w-20 after:h-1 after:bg-brand-gold after:mx-auto after:mt-3">الأكثر مبيعًا</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1: فلافل المقدسي -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-sand hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col group">
+                    <div class="relative overflow-hidden h-64 bg-gray-100">
+                        <!-- Reference File Note: فلافل المقدسي.jpeg -->
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('فلافل المقدسي.jpeg');"></div>
+                        <span class="absolute top-4 right-4 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-md">الأكثر طلبًا 🔥</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">فلافل المقدسي</h3>
+                        <p class="text-gray-650 font-light text-base mb-6 flex-grow">الصحن الشامل الفاخر المزين بالمقبلات الشامية والبطاطس المقرمشة والحمص الناعم مجهز على الطريقة الفلسطينية التراثية.</p>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <span class="text-2xl font-black text-brand-olive">25 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                            <a href="https://linktr.ee/almaqdisi" target="_blank" class="bg-brand-sand text-brand-dark font-bold px-5 py-2 rounded-xl hover:bg-brand-olive hover:text-white transition-colors">إضافة للطلب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: فول المقدسي -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-sand hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col group">
+                    <div class="relative overflow-hidden h-64 bg-gray-100">
+                        <!-- Reference File Note: فول المقدسي.jpeg -->
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('فول المقدسي.jpeg');"></div>
+                        <span class="absolute top-4 right-4 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-md">الأكثر طلبًا 🔥</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">فول المقدسي الفاخر</h3>
+                        <p class="text-gray-650 font-light text-base mb-6 flex-grow">مزيج رائع ومتناغم من الفول المدمس الفاخر المهروس بعناية مع الحمص الناعم وزيت الزيتون البكر الأصيل.</p>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <span class="text-2xl font-black text-brand-olive">15 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                            <a href="https://linktr.ee/almaqdisi" target="_blank" class="bg-brand-sand text-brand-dark font-bold px-5 py-2 rounded-xl hover:bg-brand-olive hover:text-white transition-colors">إضافة للطلب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: فول غزاوي -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-sand hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col group">
+                    <div class="relative overflow-hidden h-64 bg-gray-100">
+                        <!-- Reference File Note: فول غزاوي.jpeg -->
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('فول غزاوي.jpeg');"></div>
+                        <span class="absolute top-4 right-4 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-md">الأكثر طلبًا 🔥</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">فول غزاوي أصيل</h3>
+                        <p class="text-gray-650 font-light text-base mb-6 flex-grow">الفول المدمس على الطريقة الغزاوية التقليدية، يُقدم غنياً بالدقة الحارة الحامضة والليمون والطماطم المفرومة وزيت الزيتون.</p>
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+                            <span class="text-2xl font-black text-brand-olive">15 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                            <a href="https://linktr.ee/almaqdisi" target="_blank" class="bg-brand-sand text-brand-dark font-bold px-5 py-2 rounded-xl hover:bg-brand-olive hover:text-white transition-colors">إضافة للطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: المنيو الرقمي الكامل -->
+    <section id="menu" class="py-24 bg-brand-sandLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-olive font-bold tracking-widest text-sm uppercase block mb-2">قائمتنا الكاملة السفري والمحلي</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-cairo text-brand-dark inline-block relative after:content-[''] after:block after:w-20 after:h-1 after:bg-brand-olive after:mx-auto after:mt-3">منيو البيت المقدسي</h2>
+            </div>
+
+            <!-- Categories Grid -->
+            <!-- Reference Note: البيانات مستوحاة بدقة من ملفات السفري.jpg و ساندويتشات ومناقيش البيت المقدسي.jpg و صحون وقلايات البيت المقدسي.jpg -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- Category: علب سفري البيت المقدسي -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-sand/60">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-150">
+                        <span class="text-2xl">🥣</span>
+                        <h3 class="text-2xl font-black text-brand-olive">علب سفري البيت المقدسي (الفول والحمص)</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Item Blocks -->
+                        <div>
+                            <h4 class="font-bold text-lg text-brand-dark">الفول / المسبحة / الحمص / حمص بيروتي</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2 text-sm">
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">صغير</span> 8 ريال</div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">وسط</span> 13 ريال</div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">كبير</span> 18 ريال</div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">عائلي</span> 23 ريال</div>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-100 pt-4">
+                            <h4 class="font-bold text-lg text-brand-dark">فتة حمص / فتة مسبحة الفاخرة</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2 text-sm">
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">صغير</span> <span class="text-xs text-gray-500 block">500/520 سعرة</span></div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">وسط 1</span> <span class="text-xs text-gray-500 block">610/621 سعرة</span></div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">وسط 2</span> <span class="text-xs text-gray-500 block">695/701 سعرة</span></div>
+                                <div class="bg-brand-sandLight p-2 rounded-lg text-center"><span class="block font-bold">كبير</span> <span class="text-xs text-gray-500 block">810/836 سعرة</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: الصحون والقلايات الطازجة -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-sand/60">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-150">
+                        <span class="text-2xl">🍳</span>
+                        <h3 class="text-2xl font-black text-brand-olive">صحون وقلايات البيت المقدسي</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col"><strong>قلاية بندورة باللحمة</strong><span class="text-xs text-gray-450">900 سعرة حرارية</span></div><span class="font-bold text-brand-dark">25 ريال</span></div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col"><strong>قلاية بندورة سادة</strong><span class="text-xs text-gray-450">780 سعرة حرارية</span></div><span class="font-bold text-brand-dark">15 ريال</span></div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col"><strong>كبدة بالخضار على الصاج</strong><span class="text-xs text-gray-450">232 سعرة حرارية</span></div><span class="font-bold text-brand-dark">26 ريال</span></div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col"><strong>بيض بالجبنة النابلسية</strong><span class="text-xs text-gray-450">شخص / شخصين</span></div><span class="font-bold text-brand-dark">20 / 28 ريال</span></div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-col"><strong>مفركة بطاطا بالبيض</strong><span class="text-xs text-gray-450">شخص / شخصين</span></div><span class="font-bold text-brand-dark">15 / 25 ريال</span></div>
+                    </div>
+                </div>
+
+                <!-- Category: الساندويتشات والمناقيش -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-sand/60">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-150">
+                        <span class="text-2xl">🌯</span>
+                        <h3 class="text-2xl font-black text-brand-olive">الساندويتشات والمناقيش</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-brand-olive mb-3 border-r-2 border-brand-gold pr-2">الساندويتشات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex justify-between"><span>ساندويتش فلافل (خبز فرن)</span> <span class="font-bold">6 ريال</span></li>
+                                <li class="flex justify-between"><span>ساندويتش فول مع طحينة</span> <span class="font-bold">6 ريال</span></li>
+                                <li class="flex justify-between"><span>ساندويتش بيض مفركة</span> <span class="font-bold">6 ريال</span></li>
+                                <li class="flex justify-between"><span>ساندويتش شكشوكة / كبدة</span> <span class="font-bold">6 / 8 ريال</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-olive mb-3 border-r-2 border-brand-gold pr-2">المناقيش الفخارية</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex justify-between"><span>منقوشة زعتر فلسطيني</span> <span class="font-bold">7 ريال</span></li>
+                                <li class="flex justify-between"><span>منقوشة جبنة عكاوي شيكي</span> <span class="font-bold">12 ريال</span></li>
+                                <li class="flex justify-between"><span>منقوشة جبنة نابلسية</span> <span class="font-bold">12 ريال</span></li>
+                                <li class="flex justify-between"><span>منقوشة لحم بعجين أصيل</span> <span class="font-bold">12 ريال</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: مقبلات وفلافل المقدسي -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-brand-sand/60">
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-150">
+                        <span class="text-2xl">🧆</span>
+                        <h3 class="text-2xl font-black text-brand-olive">الفلافل والمقبلات الجانبية</h3>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center"><span>فلافل عادي ( 4 حبات مقرمشة )</span> <span class="font-bold">1 ريال</span></div>
+                        <div class="flex justify-between items-center"><span>فلافل محشية فاخرة ( حبة واحدة )</span> <span class="font-bold">1 ريال</span></div>
+                        <div class="flex justify-between items-center"><span>صحن فلافل مشكل كبير</span> <span class="font-bold">25 ريال</span></div>
+                        <div class="flex justify-between items-center"><span>صحن مشكل مقالي (باذنجان، بطاطس، زهرة)</span> <span class="font-bold">18 ريال</span></div>
+                        <div class="flex justify-between items-center"><span>صحن جبنة نابلسية طازجة</span> <span class="font-bold">18_ريال</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: البوكسات وجمعات العائلة -->
+    <section id="boxes" class="py-24 pattern-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-gold font-bold tracking-widest text-sm uppercase block mb-2">تجهيزات السفر والجمعات</span>
+                <h2 class="text-3xl sm:text-4xl font-black font-cairo text-brand-dark inline-block relative after:content-[''] after:block after:w-20 after:h-1 after:bg-brand-gold after:mx-auto after:mt-3">بوكسات البيت المقدسي الفاخرة</h2>
+            </div>
+
+            <!-- Main Boxes Grid -->
+            <!-- Reference Note: بوكسات السفري.jpg -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <!-- بوكس الفرد -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-brand-olive/10 hover:border-brand-olive transition-all flex flex-col group">
+                    <div class="h-72 bg-gray-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url(''); background-position: top;"></div>
+                        <div class="absolute top-4 right-4 bg-brand-olive text-white font-bold px-4 py-1.5 rounded-full text-sm">بوكس الـ 49</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-black text-brand-dark mb-4">بوكس الفرد الفاخر</h3>
+                        <p class="text-gray-600 mb-6 font-light">وجبة متكاملة ومثالية مشبعة ومجهزة بعناية فائقة لتناسب ذوقك الشخصي في التنقل والسفر.</p>
+                        <div class="bg-brand-sandLight p-4 rounded-xl mb-6">
+                            <span class="font-bold text-brand-olive block mb-2">المكونات:</span>
+                            <ul class="grid grid-cols-2 gap-2 text-sm text-brand-dark/95">
+                                <li>🧆 فلافل مقرمش</li>
+                                <li>🫓 خبز طازج</li>
+                                <li>🥣 حمص ناعم</li>
+                                <li>🍲 فول مدمس</li>
+                                <li>🌶️ صوصات ومقبلات جانبية</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-3xl font-black text-brand-dark">49 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                            <a href="جبنة ام صالح.png" target="_blank" class="bg-brand-olive text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-oliveLight transition-colors">طلب البوكس</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بوكس المجموعة -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-2 border-brand-olive/10 hover:border-brand-olive transition-all flex flex-col group">
+                    <div class="h-72 bg-gray-200 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('بوكسات السفري.jpg'); background-position: bottom;"></div>
+                        <div class="absolute top-4 right-4 bg-brand-olive text-white font-bold px-4 py-1.5 rounded-full text-sm">بوكس الـ 89</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-black text-brand-dark mb-4">بوكس المجموعة والعائلة</h3>
+                        <p class="text-gray-600 mb-6 font-light">مخصص لجمعات الأهل والأصدقاء، يحتوي على تشكيلة واسعة من ألذ المأكولات التراثية الساخنة والباردة.</p>
+                        <div class="bg-brand-sandLight p-4 rounded-xl mb-6">
+                            <span class="font-bold text-brand-olive block mb-2">المكونات:</span>
+                            <ul class="grid grid-cols-2 gap-2 text-sm text-brand-dark/95">
+                                <li>🥘 أطباق فلسطينية متعددة</li>
+                                <li>🧆 تشكيلة فلافل</li>
+                                <li>🥣 حمص ومسبحة</li>
+                                <li>🍲 فول بالدقة</li>
+                                <li>🫓 سلة خبز مجهز</li>
+                                <li>🥗 مقبلات ومخللات مشكلة</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto flex justify-between items-center pt-4 border-t border-gray-100">
+                            <span class="text-3xl font-black text-brand-dark">89 <span class="text-sm font-normal text-gray-500">ريال</span></span>
+                            <a href="https://linktr.ee/almaqdisi" target="_blank" class="bg-brand-olive text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-oliveLight transition-colors">طلب البوكس</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Catering Catering Boxes Section (أم صالح Series) -->
+            <!-- Reference Note: بيض ام صالح.png و جبنة ام صالح.png و فلافل ام صالح.png -->
+            <div class="text-center mb-12">
+                <h3 class="text-xl font-bold font-cairo text-brand-olive">سلسلة بوكسات "أم صالح" العصرية للضيافة 🎁</h3>
+                <p class="text-sm text-gray-500 max-w-xl mx-auto mt-2">مغلفة بشكل راقٍ وممتاز جداً لتناسب مناسباتكم الفاخرة واجتماعات العمل المتميزة تحت شعار "كل لقمة تحكي أصالة وطعم ما يتعوض"</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- بيض أم صالح -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-sand hover:shadow-xl transition-all text-center">
+                    <div class="h-48 rounded-xl bg-gray-100 mb-4 bg-cover bg-center" style="background-image: url('بيض ام صالح.png');"></div>
+                    <h4 class="font-bold text-lg text-brand-dark">بوكس بيض أم صالح</h4>
+                    <p class="text-xs text-gray-500 mt-1">ساندويتشات مفركة البيض والشكشوكة الطازجة المجهزة بالخبز الفلسطيني التقليدي.</p>
+                </div>
+                <!-- جبنة أم صالح -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-sand hover:shadow-xl transition-all text-center">
+                    <div class="h-48 rounded-xl bg-gray-100 mb-4 bg-cover bg-center" style="background-image: url('جبنة ام صالح.png');"></div>
+                    <h4 class="font-bold text-lg text-brand-dark">بوكس جبنة أم صالح (نابلسية)</h4>
+                    <p class="text-xs text-gray-500 mt-1">ساندويتشات الجبنة النابلسية الفاخرة مع شرائح الطماطم والنعناع الطازج.</p>
+                </div>
+                <!-- فلافل أم صالح -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-sand hover:shadow-xl transition-all text-center">
+                    <div class="h-48 rounded-xl bg-gray-100 mb-4 bg-cover bg-center" style="background-image: url('فلافل ام صالح.png');"></div>
+                    <h4 class="font-bold text-lg text-brand-dark">بوكس فلافل أم صالح</h4>
+                    <p class="text-xs text-gray-500 mt-1">بوكس المناسبات الشهير المليء بساندويتشات ميني فلافل المقدسي بالدقة والطحينة.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-brand-dark text-brand-sandLight pt-20 pb-10 border-t-4 border-brand-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+
+            <!-- Links & Brand Info -->
+            <div class="space-y-6">
+                <div class="text-brand-sand font-black text-3xl font-cairo">🌿 مطعم المقدسي</div>
+                <p class="text-brand-sand/70 font-light text-base leading-relaxed">
+                    نقدم لكم أرقى تجربة طعام فلسطيني بالملكة العربية السعودية، نجمع بين عراقة التراث وجودة التقديم الحديثة.
+                </p>
+                <div class="pt-2">
+                    <h4 class="text-brand-gold font-bold mb-3">روابط سريعة للتواصل والطلب:</h4>
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="inline-flex items-center gap-2 bg-brand-olive text-white px-5 py-2.5 rounded-xl hover:bg-brand-oliveLight transition-all text-sm font-semibold shadow-md">
+                        <span>🔗 منصة الطلب الموحدة Linktree</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Media (تابعنا) -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold font-cairo text-brand-gold border-r-2 border-brand-gold pr-3">تابعنا على وسائل التواصل</h3>
+                <p class="text-sm text-brand-sand/60">كن قريباً منا لمتابعة آخر عروضنا ووصفاتنا الشهية:</p>
+                <div class="flex flex-col space-y-3 pt-2 text-sm">
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                        <span>📸 إنستغرام (Instagram)</span>
+                    </a>
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                        <span>🎵 تيك توك (TikTok)</span>
+                    </a>
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                        <span>💬 خدمة عملاء واتساب (WhatsApp)</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Location (موقعنا) -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold font-cairo text-brand-gold border-r-2 border-brand-gold pr-3">موقعنا وفرعنا</h3>
+                <p class="text-sm text-brand-sand/70 leading-relaxed">يسعدنا استقبالكم وخدمتكم بكل حب وكرم فلسطيني أصيل. ابحث عن فروعنا مباشرة عبر الخريطة.</p>
+                <!-- Embedded Simulated Premium Map UI Placeholder -->
+                <div class="w-full h-40 bg-brand-olive/20 rounded-2xl border border-brand-gold/30 flex flex-col items-center justify-center p-4 text-center">
+                    <span class="text-2xl mb-1">📍</span>
+                    <span class="text-xs font-bold text-brand-sand">المملكة العربية السعودية</span>
+                    <a href="https://linktr.ee/almaqdisi" target="_blank" class="mt-3 bg-brand-gold text-brand-dark px-4 py-1.5 rounded-xl text-xs font-bold hover:bg-brand-sand transition-colors">افتح الموقع عبر Google Maps</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-brand-sand/10 pt-8 text-center text-xs text-brand-sand/40">
+            <p>&copy; 2026 مطعم البيت المقدسي. جميع الحقوق محفوظة. تم تصميمه بكل حب وفخامة فلسطينية.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
